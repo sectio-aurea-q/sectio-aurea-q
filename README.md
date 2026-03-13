@@ -143,12 +143,7 @@ Und an dem was die neuen Standards **nicht** aushalten werden.
 <tr>
 <td width="50%" valign="top">
 
-#### 🔒 CROW
-**Quantum-Safe P2P Messenger**  
-ML-KEM-1024 Post-Quantum Encryption.  
-Gebaut auf Mathematik die auch in 20 Jahren noch hält.  
-*Für Journalisten, Whistleblower, Dissidenten.*  
-`Rust` `WebRTC` `ML-KEM-1024`
+ 
 
 </td>
 <td width="50%" valign="top">
