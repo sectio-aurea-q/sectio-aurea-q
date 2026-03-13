@@ -1,13 +1,4 @@
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/MEGALODON-MeG/MEGALODON-MeG/main/MEGALODON-HEADER.svg" width="800" alt="MEGALODON" />
-</p>
-
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=400&size=16&duration=3000&pause=1000&color=666666&center=true&vCenter=true&width=700&height=30&lines=There's+a+new+shark+in+the+ocean.+And+she's+smarter+than+all+of+you." alt="tagline" />
-</p>
-
-<br>
 
 ```
    "Mathematik lügt nicht. Menschen schon.
