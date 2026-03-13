@@ -271,16 +271,7 @@ Das ist keine Kriminalität. Das ist **Wissenschaft**.
 
 ---
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MEGALODON-MeG&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=0099dd&icon_color=00FFAA&text_color=c9d1d9&count_private=true" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=MEGALODON-MeG&theme=radical&hide_border=true&background=0D1117&ring=0099dd&fire=0099dd&currStreakLabel=00FFAA&sideNums=c9d1d9" width="48%" />
-</p>
 
----
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=MEGALODON-MeG&color=0099dd&style=for-the-badge&label=👁️+OBSERVING" />
-</p>
 
 <p align="center">
   <b><i>„Im tiefen Wasser schwimmen keine kleinen Fische."</i></b>
