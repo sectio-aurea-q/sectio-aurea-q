@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="meg-header.png" width="300" />
+</p>
+
 
 
 ```
