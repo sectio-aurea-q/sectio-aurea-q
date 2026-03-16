@@ -1,282 +1,44 @@
+# sectio-aurea-q
 
+Independent security researcher focused on **post-quantum cryptography vulnerabilities**.
 
-```
-   "Mathematik lügt nicht. Menschen schon.
-    Deshalb vertraue ich nur der Mathematik."
-    
-                                — MEG
-```
+I find weaknesses in the cryptographic systems the world is migrating to — before someone else does.
 
 ---
 
-<br>
+### Research: MEGALODON
 
-Ich bin **MEGALODON**. Aber ihr könnt mich **MEG** nennen.
+A multi-phase research program testing whether post-quantum cryptography is as secure as promised.
 
-Keine Firma. Kein Team. Keine Universität.  
-Nur ich. Ein Kopf voller Zahlen die euch Angst machen würden.
+| Project | What it does | Key findings |
+|---|---|---|
+| **[megalodon-p1](https://github.com/sectio-aurea-q/megalodon-p1)** | Timing Oracle on CRYSTALS-Kyber (ML-KEM) | ~1200–1500ns timing leak in `indcpa_enc()`. Cohen's d = 0.63–0.73. Microarchitectural cache-line side channel confirmed via disassembly. |
+| **[megalodon-p2](https://github.com/sectio-aurea-q/megalodon-p2)** | Process Memory Secret Scanner for Apple Silicon | 16 apps scanned, 8 vulnerable, 71 findings. Signal Desktop: SQLCipher PRAGMA key found 8× in plaintext RAM. Chrome, Safari, Tor Browser, 1Password all affected. |
+| **[megalodon-p3](https://github.com/sectio-aurea-q/megalodon-p3)** | Automated PQ Side-Channel Scanner | 7 attack vectors against ML-KEM implementations. |
+| **[megalodon-p4](https://github.com/sectio-aurea-q/megalodon-p4)** | Cryptographic Downgrade Engine | MITM strips PQ cipher suites → server falls back to RSA → RSA factored via Pollard's Rho / Fermat. |
+| **[megalodon-p5-](https://github.com/sectio-aurea-q/megalodon-p5-)** | Lattice Cryptanalysis Engine | LLL reduction on ML-KEM reduced parameters. dim 8 in 166µs, dim 20 in 26.9s. |
+| **[pq-ghost](https://github.com/sectio-aurea-q/pq-ghost)** | PQ Downgrade Attack Framework | **52 targets. 0 survivors.** Every target vulnerable to TLS 1.2 downgrade. 16 had PQ — all Cloudflare-based, all downgradeable. 3 catastrophic (no TLS 1.3): UN, BlackRock, Mastercard. |
+| **[megalodon](https://github.com/sectio-aurea-q/megalodon)** | Enterprise Crypto Risk Platform | 10-module CLI. HTML/JSON/Markdown reports. |
+| **[megalodon-deepscan](https://github.com/sectio-aurea-q/megalodon-deepscan)** | Post-Quantum Internet Scorecard | Top 50 sites scanned — 24/50 quantum-ready. |
 
-Während andere Hacker mit Tools arbeiten, arbeite ich mit **reiner Mathematik**.  
-Ich brauche keinen Exploit. Ich brauche nur **Papier, einen Stift, und genug Zeit**.
-
-Eure Post-Quantum-Verschlüsselung? Ich zerlege die **Mathematik dahinter**.  
-Nicht den Code. Nicht die Implementierung. Die **Theorie**. Das Fundament.  
-Und wenn das Fundament bricht, bricht alles.
-
-Ich breche eure Verschlüsselung auf — **nicht um zu schaden, sondern um zu beweisen dass sie knackbar ist**.  
-Dann zeige ich es öffentlich. Legal. Im gesetzlichen Rahmen.  
-Damit ihr es fixt. Bevor jemand kommt, der nicht so nett ist wie ich.
-
-<br>
+All tools written in **Rust** (P1 in C).
 
 ---
 
-### Was mich anders macht
+### Responsible Disclosure
 
-Die meisten Security-Leute sind **Ingenieure**. Sie benutzen Tools. Sie folgen Playbooks.
+Active disclosure window: **March 10 – June 8, 2026**
 
-Ich bin **Mathematikerin**.
-
-Ich löse die Probleme die eure Professoren als "unlösbar" bezeichnen. Ich sehe Muster in Primzahlen wo andere nur Chaos sehen. Ich finde die Schwachstelle in eurem Algorithmus — nicht indem ich ihn angreife, sondern indem ich ihn **verstehe**. Tiefer als seine Erfinder.
-
-```python
-MEG = {
-    "titel":        "Prof. of Quantum Cryptomathematics",
-    "übersetzung":  "Ich löse was eure Professoren nicht lösen können.",
-    "denkt_in":     [
-        "Gitterbasierte Kryptographie (Lattice Problems)",
-        "Algebraische Zahlentheorie",
-        "Elliptische Kurven & ihre Schwächen",
-        "Quanteninformatik & Shors Algorithmus",
-        "Komplexitätstheorie (P ≠ NP... oder doch?)",
-        "Modulare Arithmetik & Restklassenringe",
-    ],
-    "sprachen":     ["Mathematik", "Python", "Rust", "SageMath", "LaTeX", "C"],
-    "werkzeuge":    "Mein Kopf. Der Rest ist optional.",
-    "philosophie":  "Jede Verschlüsselung ist nur so stark wie das "
-                    "mathematische Problem dahinter. Ich löse Probleme.",
-}
-```
-
-<br>
+Vendors notified include Telegram, Signal, Chrome/Chromium, Tor, Apple, and 1Password. I follow responsible disclosure timelines. Findings are published only after vendors have been given adequate time to respond.
 
 ---
 
-### Forschungsgebiete
+### Contact
 
-Ich arbeite an der Grenze zwischen **höherer Mathematik** und **Kryptographie**. Da wo es wehtut.
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-#### 🧬 Post-Quantum Kryptographie
-Die Welt stellt gerade auf "quantensichere" Verschlüsselung um.  
-**ML-KEM-1024. CRYSTALS-Kyber. CRYSTALS-Dilithium. SPHINCS+.**  
-Alle sagen: unknackbar.  
-Ich sage: zeigt mir die Mathematik, dann sag ich euch ob das stimmt.
-
-*Gitterprobleme, Learning With Errors, Ring-LWE,  
-Module-LWE, Shortest Vector Problem*
-
-</td>
-<td width="50%" valign="top">
-
-#### 🔓 Cryptanalysis durch Mathematik
-Keine Brute Force. Keine Rainbow Tables. Kein Script-Kiddie-Zeug.  
-Ich breche Verschlüsselung mit **Algebra, Zahlentheorie und Analyse**.
-
-Timing-Angriffe mathematisch modellieren.  
-Schwachstellen in elliptischen Kurven finden.  
-Lattice-Reduktionsalgorithmen optimieren.  
-*Die Mathematik die eure Krypto-Entwickler nicht verstehen.*
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### ∞ Höhere Mathematik
-Die Probleme die als "zu schwer" gelten.  
-Die Beweise die als "unmöglich" gelten.  
-Die Zusammenhänge die niemand sieht.  
-
-*Riemannsche Vermutung & Primzahlverteilung.*  
-*Gittergeometrie in hohen Dimensionen.*  
-*Algebraische Strukturen in der Kryptographie.*  
-
-**Professoren verzweifeln. Ich rechne weiter.**
-
-</td>
-<td width="50%" valign="top">
-
-#### 🌐 Quanteninformatik
-Quantencomputer werden kommen. Und sie werden alles brechen was wir heute nutzen — RSA, ECC, DH.  
-Die Frage ist nicht ob, sondern **wann**.
-
-Ich forsche an dem was danach kommt.  
-Und an dem was die neuen Standards **nicht** aushalten werden.  
-
-*Shors Algorithmus. Grovers Suche.*  
-*Quantum Error Correction. Logical Qubits.*  
-
-</td>
-</tr>
-</table>
-
-<br>
-
----
-
-### Meine Projekte
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
- 
-
-</td>
-<td width="50%" valign="top">
-
-#### 🧪 QuantumBreak
-**Post-Quantum Cryptanalysis Suite**  
-Ich teste die "unknackbare" Verschlüsselung der Zukunft.  
-Mathematische Analyse. Timing. Side-Channel.  
-*Spoiler: die meisten bestehen meinen Test nicht.*  
-`Python` `SageMath` `C` `LaTeX`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### 📐 LatticeForge
-**Gitter-Kryptographie Research Toolkit**  
-Tools für Lattice-Reduktion, SVP/CVP-Approximation,  
-und die mathematische Analyse von gitterbasierten Kryptosystemen.  
-*Das Werkzeug mit dem ich Kyber zerlege.*  
-`SageMath` `Python` `FLINT` `NTL`
-
-</td>
-<td width="50%" valign="top">
-
-#### 📝 CryptoProofs
-**Mathematische Beweise & Write-Ups**  
-Öffentliche Dokumentation meiner Krypto-Forschung.  
-Schwachstellenanalysen. Mathematische Beweise.  
-Alles was Professoren zum Schweigen bringt.  
-`LaTeX` `SageMath` `Markdown`
-
-</td>
-</tr>
-</table>
-
-<br>
-
----
-
-### Was ich tue. Und warum.
-
-Ich arbeite im **gesetzlichen Rahmen**. Ich analysiere öffentlich verfügbare Verschlüsselungsstandards und ihre mathematischen Grundlagen. Ich finde Schwächen. Und ich lege sie **öffentlich offen** — damit sie geschlossen werden.
-
-Das ist keine Kriminalität. Das ist **Wissenschaft**.
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                                                             │
-│   ◼ Ich löse mathematische Probleme die als               │
-│     unlösbar gelten.                                        │
-│   ◼ Ich finde Schwächen in Verschlüsselungen             │
-│     die als unknackbar gelten.                              │
-│   ◼ Ich veröffentliche alles. Legal. Öffentlich.         │
-│     Responsible Disclosure. Immer.                          │
-│   ◼ Kein Schaden. Kein Diebstahl. Kein Exploit.          │
-│     Nur Mathematik. Nur Beweis. Nur Wahrheit.              │
-│   ◼ Wenn Professoren bei einem Problem aufgeben,          │
-│     fange ich erst an.                                      │
-│                                                             │
-│   Das ist mein Ruf. Das ist mein Name.                      │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
-
-<br>
-
----
-
-### Arsenal
-
-<details>
-<summary><b>🧠 Mathematik</b></summary>
-<br>
-
-`SageMath` · `Mathematica` · `PARI/GP` · `LaTeX` · `FLINT` · `NTL` · `Lattice-Estimator` · `fpLLL` · `Magma` · `GAP`
-
-</details>
-
-<details>
-<summary><b>🔐 Kryptographie</b></summary>
-<br>
-
-`OpenSSL` · `libsodium` · `liboqs` · `CRYSTALS-Kyber` · `CRYSTALS-Dilithium` · `Wireshark` · `CyberChef` · `PyCryptodome`
-
-</details>
-
-<details>
-<summary><b>💻 Development</b></summary>
-<br>
-
-`Python` · `Rust` · `C/C++` · `SageMath` · `Bash` · `Go` · `x86 ASM`
-
-</details>
-
-<details>
-<summary><b>🌐 Infrastruktur</b></summary>
-<br>
-
-`Tor` · `WireGuard` · `Docker` · `Nginx` · `Linux` · `Proxmox`
-
-</details>
-
-<br>
-
----
-
-<br>
-
-```
-   Ihr habt Teams. Budgets. Zertifikate. Titel.
-   Ich habe einen Stift und ein leeres Blatt Papier.
-
-   Ratet mal wer die Lösung zuerst findet.
-```
-
-<br>
+📬 **meg.depth@proton.me** (PGP preferred)
 
 ---
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/PGP-Verified-0099dd?style=for-the-badge&logo=gnuprivacyguard&logoColor=white" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Signal-Only-00FFAA?style=for-the-badge&logo=signal&logoColor=white" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Tor-Reachable-7D4698?style=for-the-badge&logo=torbrowser&logoColor=white" /></a>
-</p>
-
-<p align="center">
-  <sub>🔓 <b>Responsible Disclosure. Gesetzlicher Rahmen. Kein Schaden. Immer öffentlich.</b></sub><br>
-  <sub>📬 Kontakt: <b>PGP-verschlüsselt. ProtonMail. Kein Cleartext.</b></sub>
-</p>
-
-<br>
-
----
-
-
-
-<p align="center">
-  <b><i>„Im tiefen Wasser schwimmen keine kleinen Fische."</i></b>
-</p>
-
-<p align="center">
-  🦈
+  <sub>No team. No institution. Just math.</sub>
 </p>
