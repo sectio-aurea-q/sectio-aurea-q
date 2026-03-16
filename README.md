@@ -21,6 +21,8 @@ A multi-phase research program testing whether post-quantum cryptography is as s
 | **[megalodon](https://github.com/sectio-aurea-q/megalodon)** | Enterprise Crypto Risk Platform | 10-module CLI. HTML/JSON/Markdown reports. |
 | **[megalodon-deepscan](https://github.com/sectio-aurea-q/megalodon-deepscan)** | Post-Quantum Internet Scorecard | Top 50 sites scanned. 24/50 quantum-ready. |
 
+| **VAERN-60 (Anu)** | Automated PQ Side-Channel Scanner — Real Hardware | The first automated side-channel scanner for post-quantum cryptography on real hardware. Targets ML-KEM implementations ahead of NIST 2030 deadline. |
+
 All tools written in **Rust** (P1 in C).
 
 ---
