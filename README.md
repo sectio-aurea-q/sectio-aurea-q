@@ -12,7 +12,6 @@ A multi-phase research program testing whether post-quantum cryptography is as s
 
 | Project | What it does | Key findings |
 |---|---|---|
-| **[megalodon-p1](https://github.com/sectio-aurea-q/megalodon-p1)** | Timing Oracle on CRYSTALS-Kyber (ML-KEM) | ~1200–1500ns timing leak in `indcpa_enc()`. Cohen's d = 0.63–0.73. Cache-line side channel confirmed via disassembly. |
 | **[megalodon-p2](https://github.com/sectio-aurea-q/megalodon-p2)** | Process Memory Secret Scanner for Apple Silicon | 16 apps scanned, 8 vulnerable, 71 findings. Signal Desktop: SQLCipher PRAGMA key found 8x in plaintext RAM. |
 | **[megalodon-p3](https://github.com/sectio-aurea-q/megalodon-p3)** | Automated PQ Side-Channel Scanner | 7 attack vectors against ML-KEM implementations. |
 | **[megalodon-p4](https://github.com/sectio-aurea-q/megalodon-p4)** | Cryptographic Downgrade Engine | MITM strips PQ cipher suites, server falls back to RSA, RSA factored via Pollard Rho / Fermat. |
