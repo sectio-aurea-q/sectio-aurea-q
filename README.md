@@ -18,6 +18,12 @@
 
 ---
 
+### Number theory: Radix Riemanniana
+
+**[Radix Riemanniana](https://sectio-aurea-q.github.io/radix-riemanniana.html)**: the reproducing kernel of the Weil form, built from the primes alone. It chooses, for each elliptic curve, the optimal test function for bounding its analytic rank; every bound is certified with ball arithmetic. Code: [radix-rank](https://github.com/sectio-aurea-q/radix-rank) · Preprint: [doi:10.5281/zenodo.23299461](https://doi.org/10.5281/zenodo.23299461)
+
+---
+
 ### Security research: post-quantum cryptography
 
 I find weaknesses in the cryptographic systems the world is migrating to — before someone else does.
