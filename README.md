@@ -1,10 +1,26 @@
 # sectio-aurea-q
 
-Independent security researcher focused on **post-quantum cryptography vulnerabilities**.
-
-I find weaknesses in the cryptographic systems the world is migrating to — before someone else does.
+**Sabrina Hackfort** · independent researcher · [research page](https://sectio-aurea-q.github.io/sabrina-hackfort.html) · [ORCID 0009-0007-7458-2487](https://orcid.org/0009-0007-7458-2487)
 
 ---
+
+### Main line: Tunnelling informatics
+
+**[Tunnelling informatics](https://sectio-aurea-q.github.io/tunnelling-informatics.html)** is the data-driven study of hydrogen tunnelling in enzymes: every measured kinetic isotope effect with its source, what such data can and cannot prove about tunnelling, the published claims re-examined against the data, and predictions from enzyme structure tested in the laboratory. Not to be confused with information systems in tunnel construction or with network tunnelling.
+
+| Project | What it does |
+|---|---|
+| **MEG-NEN** | Curated database of measured kinetic isotope effects of enzymes, every value with its source and read twice. In construction, not yet public. |
+| **[Hackfort Equation](https://sectio-aurea-q.github.io/hackfort-equation.html)** | The quantum fraction η = 1 − 1/κ: the part of a rate that exists only because of tunnelling. |
+| **[ELIAH](https://sectio-aurea-q.github.io/eliah.html)** | Eckart tunnelling coefficients, checked against 1197 certified values. |
+| **[ZENO](https://sectio-aurea-q.github.io/zeno.html)** | Separates the tunnelling fraction of an enzyme reaction from its isotope effect. |
+| **[MEG-APSU](https://sectio-aurea-q.github.io/meg-apsu.html)** | Classifies enzymes from their structure as quantum-critical or classical; honest accuracy and limits on its page. |
+
+---
+
+### Security research: post-quantum cryptography
+
+I find weaknesses in the cryptographic systems the world is migrating to — before someone else does.
 
 ### Research: MEGALODON
 
